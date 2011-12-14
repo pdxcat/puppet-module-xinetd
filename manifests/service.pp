@@ -1,13 +1,9 @@
-xinetd
-
-This is the xinetd module.
-
 # Definition: xinetd::service
 #
 # sets up a xinetd service
 # all parameters match up with xinetd.conf(5) man page
 #
-# Parameters:   
+# Parameters:
 #   $cps         - optional
 #   $flags       - optional
 #   $per_source  - optional
@@ -19,7 +15,10 @@ This is the xinetd module.
 #   $protocol    - optional - defaults to "tcp"
 #   $user        - optional - defaults to "root"
 #   $group       - optional - defaults to "root"
+#   $groups      - optional - defaults to "yes"
 #   $instances   - optional - defaults to "UNLIMITED"
+#   $log_on_failure - optional
+#   $only_from   - optional
 #   $wait        - optional - based on $protocol will default to "yes" for udp and "no" for tcp
 #
 # Actions:
@@ -40,3 +39,34 @@ This is the xinetd module.
 #       flags       => "IPv4",
 #       per_source  => "11",
 #   } # xinetd::service
+#
+define xinetd::service (
+  $port,
+  $server,
+  $servicename    = $name,
+  $cps            = undef,
+  $disable        = "no",
+  $flags          = undef,
+  $group          = "root",
+  $groups         = "yes",
+  $instances      = "UNLIMITED",
+  $log_on_failure = undef,
+  $per_source     = undef,
+  $protocol       = "tcp",
+  $server_args    = undef,
+  $socket_type    = "stream",
+  $user           = "root",
+  $only_from      = undef,
+  $wait           = undef
+) {
+  include xinetd
+
+  file {
+    "${xinetd::confdir}/$title":
+      owner   => "root",
+      mode    => "644",
+      content => template("xinetd/service.erb"),
+      notify  => Service[$xinetd::params::servicename],
+      require => File[$xinetd::params::confdir];
+  }
+}

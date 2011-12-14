@@ -1,6 +1,7 @@
-Xinetd Puppet Module. Copyright (C) 2010 Garrett Honeycutt
+Xinetd Puppet Module. Copyright (C) 2011 Reid Vandewiele
 
-Garrett Honeycutt can be contacted at: contact@garretthoneycutt.com.
+Code forked and based on Garrett Honeycutt's module:
+https://github.com/ghoneycutt/puppet-xinetd
 
 This program and entire repository is free software; you can
 redistribute it and/or modify it under the terms of the GNU
