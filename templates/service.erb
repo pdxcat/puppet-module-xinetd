@@ -35,4 +35,19 @@ service <%= servicename %>
 <% if flags != :undef -%>
         flags           = <%= flags %>
 <% end -%>
+<% if xtype != :undef -%>
+        type            = <%= xtype %>
+<% end -%>
+<% if no_access != :undef -%>
+        no_access       = <%= no_access %>
+<% end -%>
+<% if access_times != :undef -%>
+        access_times    = <%= access_times %>
+<% end -%>
+<% if log_type != :undef -%>
+        log_type        = <%= log_type %>
+<% end -%>
+<% if bind != :undef -%>
+        bind            = <%= bind %>
+<% end -%>
 }
