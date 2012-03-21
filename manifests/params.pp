@@ -18,6 +18,13 @@ class xinetd::params {
       $servicename = "xinetd"
       $rootgroup   = "wheel"
     }
+    "OpenSUSE", "SLES", "SLED", "SuSE":  {
+      $confdir     = "/etc/xinetd.d"
+      $conffile    = "/etc/xinetd.conf"
+      $packagename = "xinetd"
+      $servicename = "xinetd"
+      $rootgroup   = "root"
+    }
     default:   {
       $confdir     = "/etc/xinetd"
       $conffile    = "/etc/xinetd.conf"

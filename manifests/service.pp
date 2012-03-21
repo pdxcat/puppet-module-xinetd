@@ -20,6 +20,11 @@
 #   $log_on_failure - optional
 #   $only_from   - optional
 #   $wait        - optional - based on $protocol will default to "yes" for udp and "no" for tcp
+#   $xtype       - optional - determines the "type" of service, see xinetd.conf(5)
+#   $no_access   - optional
+#   $access_times - optional
+#   $log_type    - optional
+#   $bind        - optional   
 #
 # Actions:
 #   setups up a xinetd service by creating a file in /etc/xinetd.d/
@@ -57,7 +62,12 @@ define xinetd::service (
   $socket_type    = "stream",
   $user           = "root",
   $only_from      = undef,
-  $wait           = undef
+  $wait           = undef,
+  $xtype          = undef,
+  $no_access      = undef,
+  $access_times   = undef,
+  $log_type       = undef,
+  $bind           = undef
 ) {
   include xinetd
 
