@@ -1,5 +1,5 @@
 name    'pdxcat-xinetd'
-version '2012.03.22'
+version '0.0.1'
 source 'https://github.com/pdxcat/puppet-module-xinetd'
 author 'Computer Action Team'
 license 'Apache License 2.0'
