@@ -1,5 +1,24 @@
-1.0.0 - 20100624
-    * initial release
+0.0.2 - pdxcat/xinetd - 2012/04/02
 
-1.0.1 - 20100812
-    * added documentation
+  ******* Update CHANGELOG for pdxcat/xinetd 0.0.2 release
+  77db640 Expand xinetd::service options
+  a5685fb Manage xinetd.d, rework init.pp
+  bf3bce8 Convert files/xinetd.conf to a template
+  2903409 Add xinetd::params class
+  d983552 Add missing service namespace
+  f4f32fb Merge pull request #4 from ghoneycutt/style_refactor
+  47e853c refactor for style
+  d797b2e adding entries to .gitignore and removing pkg/ from git
+  76d5d78 Merge pull request #3 from bodepd/master
+  d21f0fe Adds config item bind to xinetd::service
+  bb1425b Merge pull request #2 from derekhiggins/47ab22f994fb6c5d8acc8aba04200db1c8df0fde
+  47ab22f Removing metadata.json
+
+1.0.1 - ghoneycutt/xinetd - 2010/08/12
+
+  1373fe5 1.0.1 - added documentation
+  bf61cce adding pkg built with puppet-module
+
+1.0.0 - ghoneycutt/xinetd - 2010/06/24
+
+  cb13233 initial publication
