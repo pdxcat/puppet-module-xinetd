@@ -1,6 +1,10 @@
+0.0.3 - pdxcat/xinetd - 2012/05/08
+
+  ******* Fix file 'require' bug
+
 0.0.2 - pdxcat/xinetd - 2012/04/02
 
-  ******* Update CHANGELOG for pdxcat/xinetd 0.0.2 release
+  100fe33 Update Modulefile for pdxcat/xinetd 0.0.2 release
   77db640 Expand xinetd::service options
   a5685fb Manage xinetd.d, rework init.pp
   bf3bce8 Convert files/xinetd.conf to a template
