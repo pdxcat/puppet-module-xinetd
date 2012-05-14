@@ -1,6 +1,11 @@
+0.0.4 - pdxcat/xinetd - 2012/05/14
+
+  ******* Update Modulefile for pdxcat/xinetd 0.0.4 patch
+  1d32df0 Change hasrestart parameter to false
+
 0.0.3 - pdxcat/xinetd - 2012/05/08
 
-  ******* Fix file 'require' bug
+  c8b2643 Fix file 'require' bug
 
 0.0.2 - pdxcat/xinetd - 2012/04/02
 
