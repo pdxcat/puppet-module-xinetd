@@ -7,8 +7,8 @@
 #   $cps            - optional
 #   $flags          - optional
 #   $per_source     - optional
-#   $port           - required - determines the service port
-#   $server         - required - determines the program to execute for this service
+#   $port           - required - the service port
+#   $server         - required - the program to execute for this service
 #   $server_args    - optional
 #   $disable        - optional - defaults to "no"
 #   $socket_type    - optional - defaults to "stream"
@@ -19,8 +19,8 @@
 #   $instances      - optional - defaults to "UNLIMITED"
 #   $log_on_failure - optional
 #   $only_from      - optional
-#   $wait           - optional - based on $protocol will default to "yes" for udp and "no" for tcp
-#   $xtype          - optional - determines the "type" of service, see xinetd.conf(5)
+#   $wait           - optional - defaults to "yes" for udp and "no" for tcp
+#   $xtype          - optional - the "type" of service, see xinetd.conf(5)
 #   $no_access      - optional
 #   $access_times   - optional
 #   $log_type       - optional
@@ -52,17 +52,17 @@ define xinetd::service (
   $ensure         = present,
   $service_name   = $title,
   $cps            = undef,
-  $disable        = "no",
+  $disable        = 'no',
   $flags          = undef,
-  $group          = "root",
-  $groups         = "yes",
-  $instances      = "UNLIMITED",
+  $group          = 'root',
+  $groups         = 'yes',
+  $instances      = 'UNLIMITED',
   $log_on_failure = undef,
   $per_source     = undef,
-  $protocol       = "tcp",
+  $protocol       = 'tcp',
   $server_args    = undef,
-  $socket_type    = "stream",
-  $user           = "root",
+  $socket_type    = 'stream',
+  $user           = 'root',
   $only_from      = undef,
   $wait           = undef,
   $xtype          = undef,
