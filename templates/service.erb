@@ -12,37 +12,37 @@ service <%= service_name %>
         group           = <%= @group %>
         groups          = <%= @groups %>
         server          = <%= @server %>
-<% if server_args != :undef -%>
+<% if @server_args -%>
         server_args     = <%= @server_args %>
 <% end -%>
-<% if only_from != :undef -%>
+<% if @only_from -%>
         only_from       = <%= @only_from %>
 <% end -%>
-<% if per_source != :undef -%>
+<% if @per_source -%>
         per_source      = <%= @per_source %>
 <% end -%>
-<% if log_on_failure != :undef -%>
+<% if @log_on_failure -%>
         log_on_failure += <%= @log_on_failure %>
 <% end -%>
-<% if cps != :undef -%>
+<% if @cps -%>
         cps             = <%= @cps %>
 <% end -%>
-<% if flags != :undef -%>
+<% if @flags -%>
         flags           = <%= @flags %>
 <% end -%>
-<% if xtype != :undef -%>
+<% if @xtype -%>
         type            = <%= @xtype %>
 <% end -%>
-<% if no_access != :undef -%>
+<% if @no_access -%>
         no_access       = <%= @no_access %>
 <% end -%>
-<% if access_times != :undef -%>
+<% if @access_times -%>
         access_times    = <%= @access_times %>
 <% end -%>
-<% if log_type != :undef -%>
+<% if @log_type -%>
         log_type        = <%= @log_type %>
 <% end -%>
-<% if bind != :undef -%>
+<% if @bind -%>
         bind            = <%= @bind %>
 <% end -%>
 }
